@@ -1,0 +1,13 @@
+<div class="jumbotron">
+<input type="text" ng-model="user.name">
+  <h3>Liste des utilisateurs</h3>
+  <a href="#/adduser">Ajouter un utilisateur</a>
+
+  <table class="table table-bordered table-hover">
+    <tr ng-repeat="user in users | filter:user">
+      <td><a href="#/{{ user.id }}/show">{{ user.name }}, {{ user.surname }}</a></td>
+      <td><a href="#/{{ user.id }}/edit">Editer</a></td>
+      <td><a href="#/{{ user.id }}/delete">Supprimer</a></td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,29 @@
+<h2><i class="glyphicon glyphicon-briefcase"></i> {{ project.title }}</h2>
+  <table class="table table-condensed table-hover">
+    <tbody>
+    <tr>
+      <td><i class="glyphicon glyphicon-calendar"></i> Année</td>
+      <td>{{ project.year }}</td>
+    </tr>
+    <tr>
+      <td><i class="glyphicon glyphicon-align-left"></i> Description</td>
+      <td>{{ project.description }}</a></td>
+    </tr>
+    </tbody>
+  </table>
+    <a href="#/addrole"><button class="btn btn-primary">Ajouter un contributeur</button></a><br/><br/>
+<h2><i class="glyphicon glyphicon-hand-down"></i> Contributeurs <i class="glyphicon glyphicon-hand-down"></i></h2>
+<table class="table table-striped table-bordered table-hover">
+  <thead>
+  <tr>
+    <th>Prénom</th>
+    <th>Nom</th>
+    <th>Rôle</th>
+  </tr>
+  </thead>
+  <tr ng-repeat="user in users">
+    <td>{{ user.surname }}</td>
+    <td>{{ user.name }}</td>
+    <td>{{ user.role }}</td>
+  </tr>
+</table>
